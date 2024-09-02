@@ -4,8 +4,11 @@ https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245469_4d5417147a9241
 0. Prereq
 sudo apt update
 sudo apt upgrade 
-
-
+OR 
+sudo apt update && sudo apt full-upgrade -y
+# first command when any linux comman must be run first in this paths
+echo $PATH
+PATH=.:$PATH
 # for creation config file 
 touch config 
 dpkg - l| openssh 
@@ -94,7 +97,10 @@ ssh-keygen -t rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod og-wx ~/.ssh/authorized_keys
 sudo apt-get update
- 
+
+ssh HadoopLinux
+OR 
+
 ssh localhost
  
  
