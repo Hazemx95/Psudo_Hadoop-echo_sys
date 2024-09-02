@@ -4,16 +4,35 @@ https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245469_4d5417147a9241
 0. Prereq
 sudo apt update
 sudo apt upgrade 
- 
- 
+
+
+# for creation config file 
+touch config 
+dpkg - l| openssh 
+systemctl status ssh
+cd /etc/ssh
+man ssh-keygen
+
+#nano authorized_keys (bulk here public key )
+# to clear authorized_keys 
+echo "" >authorized_keys
+
+# have amzing utility to treat with files and using all the configuration in ssh 
+#scp --> file 
+man scp
+scp /home/hazem/file HadoopLinux:/home/hazem
+scp -r
  
 1. Create a hadoop user and configure passwordless ssh
-#to check database of groups 
+# to check database of groups 
 sudo cat /etc/group
 groups
 sudo addgroup hadoop
 sudo adduser --ingroup hadoop hduser   
 OR
+cat /etc/passwd
+sudo useradd -m -c " " 
+sudo userdel -r (remove home directory)
 sudo usermod -aG hadoop hazem
 groups hazem
 sudo usermod -rG hadoop hazem
@@ -25,11 +44,17 @@ hduser ALL=(ALL:ALL) ALL
 su - hduser 
  
 2. Install Java 8 Ubuntu 18.04
- 
 java -version
  
 cd /usr/local 
 sudo wget 'https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/8u221-b11/jdk-8u221-linux-x64.tar.gz'
+wget -o (rename after download)
+wget -i (put all your links in this file and recuarsf downaload each file )
+or curl (client URl treat with rest API'S (query with web application) )
+man curl
+or 
+w3m (with graphically tear with terminal )
+w3m google.com
  
 sudo tar -xzvf jdk-8u221-linux-x64.tar.gz
 sudo mv jdk1.8.0_221/ java 
