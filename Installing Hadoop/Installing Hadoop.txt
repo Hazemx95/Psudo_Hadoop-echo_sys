@@ -36,9 +36,9 @@ OR
 cat /etc/passwd
 sudo useradd -m -c " " 
 sudo userdel -r (remove home directory)
-sudo usermod -aG hadoop hazem
-groups hazem
-sudo usermod -rG hadoop hazem
+sudo usermod -aG hadoop hduser
+groups hduser
+sudo usermod -rG hadoop hduser
 sudo groupdel hadoop
 
 sudo visudo
@@ -107,9 +107,10 @@ ssh localhost
 3. Download and Install Hadoop
  
 cd /usr/local 
-sudo wget http://www-eu.apache.org/dist/hadoop/common/hadoop-3.1.2/hadoop-3.1.2.tar.gz
-sudo tar xzvf hadoop-3.1.2.tar.gz
-sudo mv hadoop-3.1.2 hadoop
+sudo wget https://dlcdn.apache.org/hadoop/common/hadoop-3.4.0/hadoop-3.4.0.tar.gz
+
+sudo tar -xzvf hadoop-3.3.6.tar.gz
+sudo mv hadoop-3.3.6 hadoop
  
 sudo chown -R hduser:hadoop /usr/local/hadoop
 sudo chmod -R 777 /usr/local/hadoop
@@ -222,6 +223,7 @@ sudo chown -R hduser:hadoop /usr/local/hadoop/yarn_data/hdfs/datanode
 source ~/.bashrc
  
 hdfs namenode -format
+echo $?
  
 start-dfs.sh 
 start-yarn.sh
@@ -231,10 +233,10 @@ jps
 namenode 9870
 http://localhost:9870/
  
-cluster info
+cluster info (yarn)
 http://localhost:8042/
  
-hadoop nodes 9864
+hadoop nodes 9864 (data nondes)
 http://localhost:9864/
  
  
