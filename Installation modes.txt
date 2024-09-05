@@ -1,0 +1,19 @@
+1. Installation modes (Standalone , Pseduo-distributed and Fully Distributed)
+
+2.Prerequistes 
+    a. Hadoop user
+    b. JDK (Java Development Kit)
+    c. SSH Server (Passwordless)
+
+3. Hadoop Installation
+    a.Download Hadoop
+    b.Path and Environment Variable
+    c.Configure Hadoop
+
+4. Start Cluster (jps)
+
+5. Access NameNode , Datanode and Yard 
+6.Ports: 
+    a.NameNode(localhost:9870)
+    b.Datanode (localhost:8042)
+    c.ClusterNode[YARN](localhost:9864)
