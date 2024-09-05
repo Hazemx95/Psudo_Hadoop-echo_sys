@@ -1,3 +1,10 @@
+# download Ubuntu server
+https://ubuntu.com/download
+
+# description for ubuntu server 
+lsb_release -a
+
+
 # Download Java JDK 1.8 from the below
 https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245469_4d5417147a92418ea8b615e228bb6935
 
@@ -21,7 +28,7 @@ man ssh-keygen
 echo "" >authorized_keys
 
 # have amzing utility to treat with files and using all the configuration in ssh 
-#scp --> file 
+#scp --> file transfer
 man scp
 scp /home/hazem/file HadoopLinux:/home/hazem
 scp -r
@@ -40,7 +47,8 @@ sudo usermod -aG hadoop hduser
 groups hduser
 sudo usermod -rG hadoop hduser
 sudo groupdel hadoop
-
+cat /etc/passwd | head -n 10 | wc -l
+us01=$(cat /etc/passwd | head -n 10 | wc -l)
 sudo visudo
 hduser ALL=(ALL:ALL) ALL
  
@@ -103,7 +111,8 @@ OR
 
 ssh localhost
  
- 
+#to edit in openssh server (mean configuration) 
+cat /etc/ssh/sshd (d refer to server )
 3. Download and Install Hadoop
  
 cd /usr/local 
