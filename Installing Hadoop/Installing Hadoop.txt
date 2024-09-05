@@ -1,4 +1,4 @@
-# download Ubuntu server
+# download Ubuntu server on WSL (windows subsystem for Linux)
 https://ubuntu.com/download
 
 # description for ubuntu server 
