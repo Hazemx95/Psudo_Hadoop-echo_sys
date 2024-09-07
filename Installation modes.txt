@@ -10,9 +10,10 @@
     b.Path and Environment Variable
     c.Configure Hadoop
 
-4. Start Cluster (jps)
+4. Start Cluster (jps) --> run all the demones in JVM
 
 5. Access NameNode , Datanode and Yard 
+
 6.Ports: 
     a.NameNode(localhost:9870)
     b.Datanode (localhost:8042)
