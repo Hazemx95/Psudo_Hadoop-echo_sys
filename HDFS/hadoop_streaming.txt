@@ -1,0 +1,4 @@
+bin/hadoop jar share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar \
+-file /home/hduser/mapper.py    -mapper /home/hduser/mapper.py \
+-file /home/hduser/reducer.py   -reducer /home/hduser/reducer.py \
+-input /testdir/hduser/ -output /user/hduser/gutenberg-output

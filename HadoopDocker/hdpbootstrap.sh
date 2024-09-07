@@ -27,9 +27,10 @@ chmod og-wx ~/.ssh/authorized_keys
 apt-get update 
 #
 cd /usr/local
-wget 'https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz'
-tar xzvf hadoop-3.3.1.tar.gz
-mv hadoop-3.3.1 hadoop
+wget 'https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz'
+
+tar -xzvf hadoop-3.3.6.tar.gz
+sudo mv hadoop-3.3.6 hadoop
 chmod -R 777 /usr/local/hadoop
 #
 echo 'net.ipv6.conf.all.disable_ipv6=1' >> /etc/sysctl.conf

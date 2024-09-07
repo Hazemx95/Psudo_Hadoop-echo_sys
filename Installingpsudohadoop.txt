@@ -16,15 +16,15 @@ hduser ALL=(ALL:ALL) ALL
  
 su - hduser 
  
-2. Install Java 8 Ubuntu 18.04
+2. Install Java 8 Ubuntu 20.04
  
 java -version
  
 cd /usr/local 
 sudo wget 'https://files-cdn.liferay.com/mirrors/download.oracle.com/otn-pub/java/jdk/8u221-b11/jdk-8u221-linux-x64.tar.gz'
  
-sudo tar -xzvf jdk-8u221-linux-x64.tar.gz
-sudo mv jdk1.8.0_221/ java 
+sudo tar -xzvf jre-8u311-linux-x64.tar.gz
+sudo mv jre-8u311/ java 
  
 ls 
 cd ~
@@ -199,3 +199,7 @@ http://localhost:9864/
  
 bin/hdfs dfs -mkdir /user
 bin/hdfs dfs -mkdir /user/hadoop
+bin/hdfs dfs -ls hdfs://localhost:9000/
+bin/hdfs dfs -mkdir hdfs://localhost:9000/
+bin/hdfs dfs -rmr hdfs://localhost:9000/
+hdfs dfs -rm -r hdfs://localhost:9000/

@@ -116,7 +116,8 @@ cat /etc/ssh/sshd (d refer to server )
 3. Download and Install Hadoop
  
 cd /usr/local 
-sudo wget https://dlcdn.apache.org/hadoop/common/hadoop-3.4.0/hadoop-3.4.0.tar.gz
+sudo wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
+
 
 sudo tar -xzvf hadoop-3.3.6.tar.gz
 sudo mv hadoop-3.3.6 hadoop

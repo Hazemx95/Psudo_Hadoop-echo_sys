@@ -1,0 +1,9 @@
+bin/hdfs dfs -mkdir /user
+bin/hdfs dfs -mkdir /user/hadoop
+hdfs dfs -ls hdfs://localhost:9000/
+hdfs dfs -mkdir hdfs://localhost:9000/
+hdfs dfs -rmr hdfs://localhost:9000/
+hdfs dfs -rm -r hdfs://localhost:9000/
+bin/hdfs dfs -copyFromLocal source/ destination/
+bin/hdfs dfs -ls source/
+bin/hdfs dfs -cat /source/ouput/part-00000 
