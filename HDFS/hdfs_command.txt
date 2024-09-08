@@ -7,3 +7,6 @@ hdfs dfs -rm -r hdfs://localhost:9000/
 bin/hdfs dfs -copyFromLocal source/ destination/
 bin/hdfs dfs -ls source/
 bin/hdfs dfs -cat /source/ouput/part-00000 
+cat test_hadoop.txt | python3 mapper.py | sort -k1,1 | python3 reduce.py 
+cat test_hadoop.txt | python3 mapper.py | sort -k1,1 \
+| python3 reduce.py 

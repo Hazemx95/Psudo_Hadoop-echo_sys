@@ -66,9 +66,9 @@ ssh localhost
 3. Download and Install Hadoop
  
 cd /usr/local 
-sudo wget http://www-eu.apache.org/dist/hadoop/common/hadoop-3.1.2/hadoop-3.1.2.tar.gz
-sudo tar xzvf hadoop-3.1.2.tar.gz
-sudo mv hadoop-3.1.2 hadoop
+sudo wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
+sudo tar xzvf hadoop-3.3.6.tar.gz
+sudo mv hadoop-3.3.6 hadoop
  
 sudo chown -R hduser:hadoop /usr/local/hadoop
 sudo chmod -R 777 /usr/local/hadoop

@@ -1,0 +1,1 @@
+docker container run -it --name "hadoopc" -h hadoopc drhazem95/hadooppsudoubt:v1.1 bash -c "/usr/local/bootstrap.sh; bash"

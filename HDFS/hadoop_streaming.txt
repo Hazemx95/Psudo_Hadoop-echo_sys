@@ -1,4 +1,4 @@
 bin/hadoop jar share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar \
--file /home/hduser/mapper.py    -mapper /home/hduser/mapper.py \
--file /home/hduser/reducer.py   -reducer /home/hduser/reducer.py \
--input /testdir/hduser/ -output /user/hduser/gutenberg-output
+-file /usr/local/hadoop/MapReduce/MapReduce/mapper.py   -mapper /usr/local/hadoop/MapReduce/MapReduce/mapper.py \
+-file /usr/local/hadoop/MapReduce/MapReduce/reduce.py   -reducer /usr/local/hadoop/MapReduce/MapReduce/reduce.py \
+-input /testdir/test_hdfs.txt -output /testdir/output
