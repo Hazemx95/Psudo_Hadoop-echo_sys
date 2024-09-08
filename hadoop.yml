@@ -3,13 +3,11 @@ version: '4'
 services: 
 
   hadoop-echo:
-    image: drhazem95/hadoop-pseduo:v1.1
+    image: drhazem95/hadooppsudoubt:v1.1
     container_name: hazem-hadoop
     hostname: hadoop-db
-    restart: unless-stopped
-    ports:
-      - 9870:9870
+    restart: always
     volumes:
-     - ./Data:/usr/local
-     - ./2.MapReduce:/usr/local
-     
+     - ./Data:/uer/local/Data 
+     - ./MapReduce:/usr/local/Python
+    
