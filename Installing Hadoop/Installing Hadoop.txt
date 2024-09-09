@@ -18,7 +18,7 @@ echo $PATH
 PATH=.:$PATH
 # for creation config file 
 touch config 
-dpkg - l| openssh 
+dpkg - l| grep openssh 
 systemctl status ssh
 cd /etc/ssh
 man ssh-keygen

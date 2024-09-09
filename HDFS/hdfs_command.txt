@@ -10,3 +10,8 @@ bin/hdfs dfs -cat /source/ouput/part-00000
 cat test_hadoop.txt | python3 mapper.py | sort -k1,1 | python3 reduce.py 
 cat test_hadoop.txt | python3 mapper.py | sort -k1,1 \
 | python3 reduce.py 
+
+
+****** to check the file download correctly *****
+file 1901.tar.gz
+guzip -c 1901.tar.gz | head
