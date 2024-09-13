@@ -12,6 +12,10 @@ cat test_hadoop.txt | python3 mapper.py | sort -k1,1 \
 | python3 reduce.py 
 
 
-****** to check the file download correctly *****
+****** to check the file download correctly when file (.gz) *****
+gzip (filename)
+gzip -k (filename)
+gzip -d (filename)
 file 1901.tar.gz
 guzip -c 1901.tar.gz | head
+gunzip -c hamlet.txt.gz | head -n 50
