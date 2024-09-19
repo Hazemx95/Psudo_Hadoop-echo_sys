@@ -1,9 +1,11 @@
 FROM library/openjdk:8
 
+
 WORKDIR /usr/local
 
 COPY hdpbootstrap.sh .
 COPY ./src  ./src
+
 
 ENV JAVA_HOME="/usr/local/java"
 ENV PATH="/usr/local/java/bin:${PATH}"
@@ -18,9 +20,13 @@ ENV PATH="/usr/local/hadoop/sbin::${PATH}"
 ENV HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 ENV HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 
-RUN chmod +x hdpbootstrap.sh
+RUN chmod +x ./hdpbootstrap.sh
 RUN chmod +x ./src/start-hadoop.sh
+RUN chmod -R 777 hdpbootstrap.sh
+RUN chmod -R 777 ./src/start-hadoop.sh
 RUN bash hdpbootstrap.sh
+
+LABEL name="Hazem Omar"
 
 ENTRYPOINT [ "/bin/bash","-c" ]
 CMD [ "./src/start-hadoop.sh" ]

@@ -1,0 +1,12 @@
+
+******* must be download some of tools and library to run spark in standalone machine
+******
+
+1- firstfull must be dowload anaconda 
+    - mini conda (cond cli)
+2- second download java in /opt directory 
+3- third download spark in the same directory (/opt)
+4- set all the configuration in bashrc file (vim ~/.bashrc)
+5- run the command with conda prompt 
+6- set the python interpeter and python notebook in bashrc file 
+7- finally run the command in your terminal (pyspark) 

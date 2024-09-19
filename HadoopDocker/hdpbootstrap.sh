@@ -2,7 +2,7 @@
 # bootstrapping Hadoop
 #
 apt-get update
-apt-get -y upgrade
+apt-get upgrade -y
 apt-get -y install wget curl rsync openssh-server openssh-client
 apt-get update --allow-unauthenticated --allow-insecure-repositories
 #
@@ -18,7 +18,12 @@ update-alternatives --set javaws /usr/local/jaopenjdk-8va/bin/javaws
 #
 ufw disable
 #
-service ssh restart
+sudo systemctl restart ssh
+
+sudo apt-get install ssh
+sudo apt-get install rsync
+ 
+# service ssh restart
 #
 ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
