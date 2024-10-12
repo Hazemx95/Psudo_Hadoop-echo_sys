@@ -1,0 +1,28 @@
+version : '3.7'
+
+services :
+  allspark:
+    image: drhazem95/pyspark:v1.0
+    container_name: allspark
+    hostname: allspark
+    environment:
+        - PUID=1000
+        - PGID=1000
+    volumes:
+        - ./pywork:/home/jovyan/pyspark
+    ports:
+        - 80:8888
+    restart: always
+
+  pyspark:
+    image: jupyter/all-spark-notebook:x86_64-ubuntu-22.04
+    container_name: pyspark
+    hostname: pyspark
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./pywork:/home/jovyan/pyspark
+    ports:
+      - 8888:8888
+    restart: unless-stopped

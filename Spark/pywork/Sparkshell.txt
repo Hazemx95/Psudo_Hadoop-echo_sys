@@ -1,0 +1,7 @@
+>>> from pyspark.sql import SparkSession
+>>> spark = SparkSession.builder.getOrCreate()
+>>> sc = spark.sparkContext
+>>> import numpy as np
+>>> data = np.arange(1,10)
+>>> rdd0 = sc.parallelize(data)
+>>> rdd0.collect()

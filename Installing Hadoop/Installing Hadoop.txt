@@ -20,6 +20,9 @@ PATH=.:$PATH
 touch config 
 dpkg - l| grep openssh 
 systemctl status ssh
+systemctl start ssh 
+ssh-keygen -A
+/usr/sbin/sshd -t
 cd /etc/ssh
 man ssh-keygen
 
@@ -37,11 +40,12 @@ scp -r
 # to check database of groups 
 sudo cat /etc/group
 groups
+sudo groups hazem (without refresh terminal)
 sudo addgroup hadoop
 sudo adduser --ingroup hadoop hduser   
 OR
 cat /etc/passwd
-sudo useradd -m -c " " 
+sudo useradd (username) -m -c " " 
 sudo userdel -r (remove home directory)
 sudo usermod -aG hadoop hduser
 groups hduser
@@ -106,7 +110,7 @@ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod og-wx ~/.ssh/authorized_keys
 sudo apt-get update
 
-ssh HadoopLinux
+ssh HadoopLinux (CONFIG)
 OR 
 
 ssh localhost

@@ -7,19 +7,29 @@ hdfs dfs -mkdir hdfs://localhost:9000/
 hdfs dfs -rmr hdfs://localhost:9000/
 hdfs dfs -rm -r hdfs://localhost:9000/
 bin/hdfs dfs -copyFromLocal source/ destination/
-bin/hdfs dfs -ls source/
+bin/hdfs dfs -ls destination/
 
-*****mapreduce**********************
+*****mapreduce print data**********************
 bin/hdfs dfs -cat /source/ouput/part-00000 
+
+
+******** For testing *****************
 cat test_hadoop.txt | python3 mapper.py | sort -k1,1 | python3 reduce.py 
 cat test_hadoop.txt | python3 mapper.py | sort -k1,1 \
 | python3 reduce.py 
 
 
-****** to check the file download correctly when file (.gz) *****
+****** to check the file download correctly when file (.gz) and compression *****
 gzip (filename)
 gzip -k (filename)
 gzip -d (filename)
 file 1901.tar.gz
+sudo tar -tf 1901.tar.gz
+sudo tar -czvf (.gz)
+sudo tar -cjvf (.bz)
 guzip -c 1901.tar.gz | head
 gunzip -c hamlet.txt.gz | head -n 50
+
+
+****** to check checksum*************
+hdfs dfs -checksum (filename in hdfs )

@@ -2,9 +2,9 @@
 ******* must be download some of tools and library to run spark in standalone machine
 ******
 
-1- firstfull must be dowload anaconda 
+1- firstfull must be download anaconda 
     - mini conda (cond cli)
-2- second download java in /opt directory 
+2- second download java in /opt directory -- check (java -version) 
 3- third download spark in the same directory (/opt)
 4- set all the configuration in bashrc file (vim ~/.bashrc)
 5- run the command with conda prompt 
